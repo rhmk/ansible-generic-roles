@@ -1,0 +1,6 @@
+
+## Better check if disk is new and can be formatted
+
+## Make Filesystem more variable (paramter fstype, opt)
+
+## make pvs optional (omit)
