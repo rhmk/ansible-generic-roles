@@ -2,7 +2,7 @@
 
 - name: ensure repositories are enabled
   fetch:
-    src: http://deploy.tom.lan/reposfiles/{{ item }}.repo
+    src: {{ reposrvurl }}/{{ item }}.repo
     dest: /etc/yum.repos.d/{{ item }}.repo
   with_items: "{{ repositories }} "
 
