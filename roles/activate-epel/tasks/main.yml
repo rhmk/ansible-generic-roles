@@ -1,0 +1,12 @@
+- name: ensure EPEL is enabled
+  yum:
+    state: present
+    name:  https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
+
+- name: ensure yum-utils are installed
+  yum:
+    state: present
+    name: yum-utils
+
+- name: ensure EPEL is deactivated by default
+  command: yum-config-manager --disable epel
