@@ -92,7 +92,7 @@
          fi
       fi
     else 
-      /usr/sbin/vgcreate {{ item.value }} {{ item.key }}
+      /usr/sbin/vgcreate {{ item.value }} {{ item.key }}1
       rc=$?
     fi
     echo "RETURNCODE: $rc"
