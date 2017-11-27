@@ -1,9 +1,11 @@
 ---
 
 - name: ensure repositories are enabled
-  fetch:
-    src: "{{ reposrvurl + item + '.repo' }}"
+  get_url:
+    url: "{{ reposrvurl + item + '.repo' }}"
     dest: /etc/yum.repos.d/{{ item }}.repo
-    fail_on_missing: yes
+    mode: 0644
+    owner: root
+    group: root
   with_items: "{{ repositories }} "
 
