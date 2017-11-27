@@ -4,5 +4,6 @@
   fetch:
     src: "{{ reposrvurl + item + '.repo' }}"
     dest: /etc/yum.repos.d/{{ item }}.repo
+    fail_on_missing: yes
   with_items: "{{ repositories }} "
 
