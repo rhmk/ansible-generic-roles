@@ -1,5 +1,14 @@
 ---
 
+- name: ensure yum-config-manager is installed
+  yum:
+    name: yum-utils
+    state: present
+
+- name: ensure all repositories are disbaled
+  cmd: yum-config-manager --disable "*"
+  when: repo_reset == true 
+   
 - name: ensure repositories are enabled
   get_url:
     url: "{{ reposrvurl + item + '.repo' }}"

@@ -1,3 +1,7 @@
 ---
 
 reposrvurl: http://deploy.tom.lan/repofiles/
+repo_reset: false
+repositories:
+                  - rhel-7-server-rpms
+
