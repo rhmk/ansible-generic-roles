@@ -42,7 +42,9 @@ Set this variable to true if you want to remove/disable all existing repositorie
 repo_reset: true
 
 Use this of the list of repositories you want to subscribe to 
+```
 repositories:
                   - rhel-7-server-rpms
                   - repo2
                   - repo3
+```
