@@ -2,6 +2,7 @@ This playbook configures are RHEL server to receive its updates from a reposync 
 On your reposync server register the server against RHN and subscribe to the repositories, you want to sync.
 Then run the following script as a cron job. It creates the proper repositories and repofiles you need to put to /etc/yum/repos.d
 
+```
 --8<-- snip -----
 #!/bin/bash
 
@@ -30,7 +31,7 @@ ls -l | grep ^d | awk '{print $9}' | while read dirs; do
 
 done
 --8<-- snip -----
-
+```
 
 You can then set the following variables in the playbook:
 
